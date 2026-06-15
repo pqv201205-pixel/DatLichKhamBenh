@@ -1,0 +1,27 @@
+# --- Các file cấu hình rác của IntelliJ IDEA ---
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+gen/
+
+# --- Thư mục build của Java / Spring Boot ---
+# Đây là nơi chứa file .class và file .jar sau khi build, KHÔNG ĐƯỢC push lên
+target/
+build/
+
+# --- File log hệ thống ---
+*.log
+
+# --- Các file cấu hình hệ thống hoặc nhạy cảm (nếu có) ---
+.DS_Store
+Thumbs.db
+crashlytics/
+
+# --- Các file sinh ra bởi các công cụ build (Maven/Gradle Wrapper) ---
+# Nếu bạn dùng Maven đi kèm máy thì có thể bỏ qua file chạy .mvn
+.mvn/
+mvnw
+mvnw.cmd
+.gradle/
