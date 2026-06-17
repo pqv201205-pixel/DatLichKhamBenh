@@ -7,6 +7,7 @@ import com.example.demo.Enums.AppointmentStatus;
 import com.example.demo.Repositories.ReviewRepository;
 import com.example.demo.Repositories.AppointmentRepository;
 
+import com.example.demo.Services.ReviewService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,7 +16,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class ReviewServiceImpl {
+public class ReviewServiceImpl implements ReviewService {
 
     private final ReviewRepository reviewRepository;
     private final AppointmentRepository appointmentRepository;

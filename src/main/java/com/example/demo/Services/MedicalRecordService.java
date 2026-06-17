@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface MedicalRecordService {
     void createMedicalRecord(MedicalRecordRequest request);
-    void uploadMedicalDocuments(Long recordId, MultipartFile[] files);
-    List<MedicalRecord> getPatientHistory(Long patientId);
+    void uploadMedicalDocuments(Integer recordId, MultipartFile[] files);
+    List<MedicalRecord> getPatientHistory(Integer patientId);
 }

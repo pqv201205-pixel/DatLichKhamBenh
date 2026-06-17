@@ -10,6 +10,7 @@ import com.example.demo.Security.JwtTokenProvider;
 import com.example.demo.Services.AuditLogService;
 import com.example.demo.Services.EmailService;
 import com.example.demo.Services.RedisTokenService;
+import com.example.demo.Services.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -35,7 +36,7 @@ import java.time.LocalDateTime;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService {
 
     private final UserRepository          userRepository;
     private final PasswordEncoder         passwordEncoder;
@@ -264,7 +265,7 @@ public class UserServiceImpl {
     // Helper
     // ─────────────────────────────────────────────
 
-    private String generateOtp() {
+    public String generateOtp() {
         return String.valueOf((int)(Math.random() * 900000) + 100000);
     }
 }
